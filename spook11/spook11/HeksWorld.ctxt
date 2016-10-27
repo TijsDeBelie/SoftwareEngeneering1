@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=HeksWorld
+comment1.params=
+comment1.target=HeksWorld()
+comment1.text=\r\n\ Create\ the\ world.\ Our\ world\ has\ a\ size\ \r\n\ of\ 560x560\ cells,\ where\ every\ cell\ is\ just\ 1\ pixel.\r\n
+comment2.params=
+comment2.target=Counter\ getCounter()
+comment2.text=\r\n\ Schrijf\ een\ methode\ in\ de\ overkoepeling\ "wereld"\ om\ de\ counter\ in\ de\ wereld\ te\ returnen\r\n\ (ophalen\ uit\ het\ origineel\ voor\ wie\ hem\ ook\ nodig\ mag\ hebben\ met\ de\ naam\ getCounter\r\n
+comment3.params=
+comment3.target=void\ populateWorld()
+comment3.text=\r\n\ zet\ alle\ objecten\ op\ de\ wereld\r\n
+comment4.params=amount
+comment4.target=void\ addPumpkins(int)
+comment4.text=\r\n\ voeg\ pompoenen\ toe\r\n
+comment5.params=amount
+comment5.target=void\ addWitches(int)
+comment5.text=\r\n\ voeg\ heksen\ toe,\ heksen\ zullen\ niet\ binnen\ de\ 50px\ van\ het\ spook\ gezet\ worden\r\n
+numComments=6

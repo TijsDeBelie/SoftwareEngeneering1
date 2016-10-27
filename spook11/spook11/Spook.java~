@@ -1,0 +1,119 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+
+public class Spook extends Animal
+{
+    private GreenfootImage afbeelding1;
+    private GreenfootImage afbeelding2;
+    private int pumpkinsEaten = 0;
+    /**
+     * Ruben: Declareer een private variabele om de start van de counter weer te geven
+     * d
+     */
+    private int counter = 0;
+    
+    /**
+     * Maak een nieuwe Spook-object en initialiseer de twee afbeeldingen
+     */
+    public Spook()
+    {
+        afbeelding1 = new GreenfootImage("spookje.png");
+        afbeelding2 = new GreenfootImage("spookje2.png");
+    }
+    
+    /** 
+     * Act - do whatever the crab wants to do. This method is called whenever
+     *  the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act()
+    {
+        checkKeypress();
+        switchImage();
+        tryToEat();
+    }
+    
+    private void makeHarder() {
+        HeksWorld world = (HeksWorld) getWorld();
+        if (pumpkinsEaten % 3 == 0) {
+            world.setBackground(HeksWorld.background2);
+            world.addPumpkins(3);
+        }
+        if (pumpkinsEaten % 6 == 0) {
+            world.setBackground(HeksWorld.background3);
+            world.addWitches(1);
+        }
+        if (pumpkinsEaten % 9 == 0) {
+            world.setBackground(HeksWorld.background1);
+            Heksje.speed +=2;
+        }
+    }
+    
+    public void tryToEat() {
+        if(canSee(Pompoen.class)){
+            /**
+            *Ruben: declareer een wereldvariabele met de naam myworld die de huidige wereld ophaalt
+            */
+            World myWorld = getWorld();
+            eat(Pompoen.class);
+            pumpkinsEaten++;
+            /**
+            *  Ruben:Declareer een wereldvariabele heksworld waar je via de getworld toegang krijgt tot alles
+            *  wat er zich in die wereld bevindt.(om toegang te krijgen tot de counter-
+            */
+           
+            HeksWorld heksworld = (HeksWorld)myWorld;
+            /**
+             * Ruben:Haal de counter op uit de wereld, samen met alle methodes die erbij horen
+             */
+            Counter counter = heksworld.getCounter();
+            /**
+             * Ruben: Haal de methode addscore() op om de counter te verhogen
+             */
+            counter.addScore();
+            Greenfoot.playSound("eetGeluid.wav");
+            makeHarder();
+        }
+    }
+    
+    /**
+     * Verander de afbeeling van de krab, zodat het lijkt of ze "echt" beweegt
+     */
+    public void switchImage()
+    {
+        counter++;
+        if (counter == 4) {
+            counter = 0;
+            if(getImage() == afbeelding1)
+            {
+                setImage(afbeelding2);
+            }
+            else
+            {
+                setImage(afbeelding1);
+            }
+        }
+    }
+    /**
+     * Check whether a control key on the keyboard has been pressed.
+     * If it has, react accordingly.
+     */
+    public void checkKeypress()
+    {
+        if (Greenfoot.isKeyDown("up")) 
+        {
+            this.setLocation(this.getX(), this.getY() - 5);
+        }
+        if (Greenfoot.isKeyDown("down")) 
+        {
+            this.setLocation(this.getX(), this.getY() + 5);
+        }
+        
+        if (Greenfoot.isKeyDown("left")) 
+        {
+           this.setLocation(this.getX() - 5, this.getY());
+        }
+        if (Greenfoot.isKeyDown("right")) 
+        {
+            this.setLocation(this.getX() + 5, this.getY());            
+        }
+    }
+}

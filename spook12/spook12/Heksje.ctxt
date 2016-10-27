@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Heksje
+comment0.text=\r\n\ De\ heks,\ heksen\ jagen\ graag\ op\ spoken\r\n
+comment1.params=
+comment1.target=Heksje()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ De\ act\ brengt\ de\ heks\ tot\ leven\ (draaien,\ vliegen,\ schieten,\ eten)\r\n
+comment3.params=
+comment3.target=void\ turnAtEdge()
+comment3.text=\r\n\ Check\ whether\ we\ are\ at\ the\ edge\ of\ the\ world.\ If\ we\ are,\ turn\ a\ bit.\r\n\ If\ not,\ do\ nothing.\r\n
+comment4.params=
+comment4.target=void\ randomTurn()
+comment4.text=\r\n\ Randomly\ decide\ to\ turn\ from\ the\ current\ direction,\ or\ not.\ If\ we\ turn\r\n\ turn\ a\ bit\ left\ or\ right\ by\ a\ random\ degree.\r\n
+comment5.params=
+comment5.target=void\ lookForSpook()
+comment5.text=\r\n\ Check\ of\ we\ een\ spook\ te\ pakken\ hebben,\ hebben\ we\ hem\ dan\ is\ het\ game\ over\r\n
+comment6.params=
+comment6.target=void\ vuurbal()
+comment6.text=\r\n\ Schiet\ random\ vuurballen\ naar\ het\ spook\r\n
+numComments=7

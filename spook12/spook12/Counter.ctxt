@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Counter
+comment0.text=\r\nDe\ Class\ Counter\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\nStel\ de\ afbeelding\ in,\ vervang\ de\ afbeelding\ door,\ tekst,\ variabelen,\ en\ geef\ deze\ een\ grootte,\r\n\ fontkleur\ en\ achtergrondkleur\ mee\r\n
+comment2.params=
+comment2.target=void\ addScore()
+numComments=3

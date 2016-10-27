@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Startscherm
+comment0.text=\r\n\ Startscherm\r\n
+comment1.params=
+comment1.target=Startscherm()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Startscherm.\r\n\ \r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ als\ er\ geklikt\ wordt\ willen\ we\ het\ spel\ starten\r\n
+numComments=3

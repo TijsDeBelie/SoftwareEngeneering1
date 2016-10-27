@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Spook
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=Spook()
+comment1.text=\r\n\ Maak\ een\ nieuwe\ Spook-object\ en\ initialiseer\ de\ twee\ afbeeldingen\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\ \r\n\ de\ act\:\ beweeg,\ animeer\ en\ eten\r\n
+comment3.params=
+comment3.target=void\ makeHarder()
+comment3.text=\r\n\ het\ spel\ wordt\ moeilijker,\ toevoegen\ van\ pompoenen,\ heksen,\ snellere\ heksen\ en\ andere\ achtergronden\r\n
+comment4.params=
+comment4.target=void\ tryToEat()
+comment4.text=\r\n\ eet\ de\ pompoenen\ als\ we\ kunnen\r\n
+comment5.params=
+comment5.target=void\ switchImage()
+comment5.text=\r\n\ Verander\ de\ afbeeling\ van\ het\ spook\ zodat\ het\ beweegt\r\n
+comment6.params=
+comment6.target=void\ checkKeypress()
+comment6.text=\r\n\ Check\ whether\ a\ control\ key\ on\ the\ keyboard\ has\ been\ pressed.\r\n\ If\ it\ has,\ react\ accordingly.\r\n
+numComments=7

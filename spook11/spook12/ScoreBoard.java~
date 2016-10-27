@@ -1,0 +1,63 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.awt.Color;
+
+
+/**
+ * Write a description of class ScoreBoard here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class ScoreBoard extends Actor
+{
+    private static final Color transparent = new Color(0,0,0);
+    public static GreenfootImage backgroundScore = new GreenfootImage("18563-red-square-3-clip-art.png");
+     
+    private int value = 0;
+    private int target = 0;
+  
+ 
+    public ScoreBoard()
+    {
+        
+        backgroundScore = getImage();
+        value= 0;
+        target=0;
+        updateImage();
+        
+    }
+    public void act()
+    { if (value<target)
+        {
+        value++;
+        updateImage();
+        }else if (value > target)
+        {
+            value--;
+        updateImage();}
+    }
+    public void add(int score)
+    {
+    target+= score;
+    }
+    public int getValue()
+    {
+        return value;
+    }
+    public int setValue(int newValue)
+    {
+        target = newValue;
+         value= newValue;
+          updateImage();
+          return
+}
+
+private void updateImage()
+{GreenfootImage image = new GreenfootImage(backgroundScore);
+    GreenfootImage text = new GreenfootImage(""+value,22,Color.BLACK, transparent);
+    image.drawImage(text, (image.getWidth()-text.getWidth())/2,
+        (image.getHeight()-text.getHeight())/2);
+        setImage(image);
+}
+}
+    

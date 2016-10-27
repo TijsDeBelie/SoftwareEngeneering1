@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
- * Importeer de mogelijkheid om kleur toe te voegen
+ *Importeer de mogelijkheid om kleur toe te voegen
  */
 import java.awt.Color;
 
@@ -10,16 +10,22 @@ import java.awt.Color;
 public class Counter extends Actor
 {
     /**
-     * Declareer een variabele die de counter op 0 zet bij de start, binnen de eigen Klasse
+     *Declareer een variabele die de counter op 0 zet bij de start, binnen de eigen Klasse
      */
     int score = 0;
-  public void act()
-  {
-      /**
-       * RuStel de afbeelding in, vervang de afbeelding door, tekst, variabelen, en geef deze een grootte,
+    private int lastScore = -1;
+    
+    /**
+       * Ruben: Stel de afbeelding in, vervang de afbeelding door, tekst, variabelen, en geef deze een grootte,
        * fontkleur en achtergrondkleur mee
        */
-     setImage(new GreenfootImage("Score : " + score, 24, Color.GREEN, Color.BLACK));
+  public void act()
+  {
+      if (lastScore != score) {
+          setImage(new GreenfootImage("Score : " + score, 24, Color.GREEN, Color.BLACK));
+          lastScore = score;
+        }
+     
       
   }   
   public void addScore()
